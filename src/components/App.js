@@ -9,12 +9,12 @@ import TodoInput from "./TodoInput";
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   items: [],
-    //   item: "",
-    //   id: uuidv4(),
-    //   editItem: false
-    // };
+    this.state = {
+      items: [],
+      item: "",
+      id: uuidv4(),
+      editItem: false
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClearList = this.handleClearList.bind(this);
@@ -59,7 +59,7 @@ class App extends Component {
             <h1 className="text-center">Todo App</h1>
             <TodoInput
               item={this.props.reduxStateAsProp.item}
-              handleChange={this.props.handleChange}
+              handleChange={this.handleChange}
               handleSubmit={this.handleSubmit}
             />
             <TodoList
