@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+#Robot test
+/public/robots.txt
+#read me file
+.README.md
+
 # testing
 /coverage
 

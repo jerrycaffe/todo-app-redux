@@ -6,7 +6,7 @@ import {ON_CHANGE, ADD_TODO, CLEAR_LIST, DELETE_ITEM, EDIT_ITEM} from '../action
 const initialState ={
   item: '',
   items: [],
-  
+  editItem: false
 }
 
 const rootReducer = (state= initialState, action)=>{
@@ -20,6 +20,7 @@ const rootReducer = (state= initialState, action)=>{
       return {
         ...state,
         item: '',
+        editItem: false,
         items: [...state.items, action.payload]
       }
     case CLEAR_LIST:
